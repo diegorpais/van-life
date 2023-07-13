@@ -1,0 +1,15 @@
+:root {
+  --background: #FFF7ED;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+}
