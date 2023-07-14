@@ -1,0 +1,15 @@
+.header-component {
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+  height: 110px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 145px;
+}
