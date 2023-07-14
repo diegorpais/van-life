@@ -1,5 +1,19 @@
 :root {
-  --background: #fff7ed;
+  --main-background: #fff7ed;
+
+  --nav-link: #4d4d4d;
+
+  --primary-btn-bg: #ff8c38;
+  --primary-btn-text: #fff;
+  --secondary-btn-bg: #161616;
+  --secondary-btn-text: #fff;
+
+  --text-primary: #161616;
+
+  --header-height: 110px;
+  --footer-height: 75px;
+
+  --max-width-app: 960px;
 }
 
 * {
@@ -14,7 +28,7 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: var(--main-background);
   -webkit-font-smoothing: antialiased;
   font-family: 'Inter', sans-serif;
 }
@@ -25,6 +39,7 @@ textarea,
 button {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  color: var(--text-primary);
 }
 
 button {
@@ -32,7 +47,7 @@ button {
 }
 
 nav a {
-  color: #4d4d4d;
+  color: var(--nav-link);
   text-decoration: none;
   font-size: 16px;
   line-height: 22px;
@@ -56,7 +71,7 @@ nav a.active {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: var(--max-width-app);
   margin: 0 auto;
   padding: 20px;
 }
@@ -74,11 +89,11 @@ nav a.active {
 }
 
 .btn-primary {
-  background-color: #ff8c38;
-  color: #fff;
+  background-color: var(--primary-btn-bg);
+  color: var(--primary-btn-text);
 }
 
 .btn-secondary {
-  background-color: #161616;
-  color: #fff;
+  background-color: var(--secondary-btn-bg);
+  color: var(--primary-btn-text);
 }

@@ -1,5 +1,5 @@
 .footer-component {
-  height: 75px;
+  height: var(--footer-height);
   background-color: #252525;
   color: #aaaaaa;
   display: flex;
