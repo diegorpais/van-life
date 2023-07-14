@@ -1,0 +1,8 @@
+.footer-component {
+  height: 75px;
+  background-color: #252525;
+  color: #aaaaaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
