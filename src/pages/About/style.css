@@ -1,0 +1,53 @@
+.about-page {
+  color: #161616;
+}
+
+.about-page header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-page header img {
+  width: 100%;
+  max-width: 960px;
+}
+
+.about-description {
+  margin-bottom: 30px;
+}
+
+.about-description h1 {
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 30px;
+}
+
+.about-description p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.box-explore-our-vans {
+  background-color: #FFCC8D;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.box-explore-our-vans h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .box-explore-our-vans { 
+    text-align: center;
+  }
+
+  .box-explore-our-vans button {
+    max-width: 520px;
+  }
+}
