@@ -14,6 +14,13 @@
   --footer-height: 75px;
 
   --max-width-app: 960px;
+
+  --van-type-text: #ffead0;
+  --van-type-default-text: #4d4d4d;
+  --van-type-default-bg: #ffead0;
+  --van-type-simple-bg: #e17654;
+  --van-type-luxury-bg: #161616;
+  --van-type-rugged-bg: #115e59;
 }
 
 * {
@@ -39,6 +46,7 @@ textarea,
 button {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  font-size: 16px;
   color: var(--text-primary);
 }
 
