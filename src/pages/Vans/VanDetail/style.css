@@ -1,0 +1,81 @@
+.van-detail-page {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.van-detail-page p a {
+  font-size: 16px;
+  line-height: 22px;
+  color: #201f1d;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.van-detail-page .van-img {
+  margin: 40px 0px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.van-type {
+  width: 85px;
+  height: 33px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.type-simple {
+  color: var(--van-type-text);
+  background-color: var(--van-type-simple-bg);
+}
+
+.type-luxury {
+  color: var(--van-type-text);
+  background-color: var(--van-type-luxury-bg);
+}
+
+.type-rugged {
+  color: var(--van-type-text);
+  background-color: var(--van-type-rugged-bg);
+}
+
+.van-data {
+  margin-top: 25px;
+  margin-bottom: 85px;
+}
+
+.van-data h1 {
+  font-size: 32px;
+  line-height: 33px;
+  margin-bottom: 25px;
+}
+
+.van-data h3 {
+  font-size: 24px;
+  line-height: 44px;
+  margin-bottom: 25px;
+}
+
+.van-data h3 span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.van-data p {
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .van-detail-page p a:hover {
+    transition: filter 0.2s;
+    text-decoration: none;
+    filter: brightness(0.1);
+  }
+}

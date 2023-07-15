@@ -1,18 +1,14 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './style.css';
 import { api } from '../../services/api';
 
-interface Van {
-  id: string;
-  name: string;
-  price: number
-  description: string;
-  imageUrl: string;
-  type: string;
-}
+import Van from '../../models/van.model';
 
 export default function Vans() {
+  const navigate = useNavigate();
+
   const filtersType = [
     'simple',
     'luxury',
@@ -69,6 +65,10 @@ export default function Vans() {
     setFilters([]);
   }
 
+  function redirectToVanDetail(id: string) {
+    navigate(`/vans/${id}`);
+  }
+
   const filterButtons = filtersType.map((filter) => (
     <button
       key={filter}
@@ -81,7 +81,11 @@ export default function Vans() {
   ));
 
   const vanElements = vans.map((van) => (
-    <div className="van-item" key={van.id}>
+    <div
+      className="van-item"
+      key={van.id}
+      onClick={() => { redirectToVanDetail(van.id) }}>
+
       <img src={van.imageUrl} alt={van.name} />
 
       <div className="info">
