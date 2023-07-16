@@ -15,6 +15,13 @@ export default function Header() {
 
         <NavLink
           className={({ isActive }) => (isActive ? 'active' : '')}
+          to='/host'
+        >
+          Host
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) => (isActive ? 'active' : '')}
           to='/about'
         >
           About

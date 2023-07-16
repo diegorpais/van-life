@@ -1,0 +1,94 @@
+.dash-page {
+}
+
+.welcome-box {
+  background-color: #ffead0;
+  padding: 10px 0px;
+}
+
+.welcome-box h3 {
+  font-size: 36px;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+
+.welcome-box h1 {
+  font-size: 48px;
+  line-height: 38px;
+  margin-top: 30px;
+}
+
+.welcome-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-info p,
+.welcome-info a {
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.welcome-info a {
+  color: #161616;
+}
+
+.welcome-info p span {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.score-box {
+  background-color: #ffddb2;
+  padding: 10px 0px;
+}
+
+.score-box .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score-box .container a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #161616;
+}
+
+.score {
+  line-height: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score p:first-child {
+  font-size: 24px;
+}
+
+.score p:last-child {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.score p:last-child svg {
+  padding-top: 5px;
+}
+
+.score span {
+  color: #4d4d4d;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-info a:hover,
+  .score-box .container a:hover {
+    transition: filter 0.2s;
+    filter: brightness(0.1);
+    text-decoration: underline;
+  }
+}

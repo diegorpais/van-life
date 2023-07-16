@@ -105,7 +105,7 @@ export default function Vans() {
 
 
   return (
-    <section className='container vans-page'>
+    <section className='container container-min-height vans-page'>
 
       <h1 className='title'>Explore our van options</h1>
 

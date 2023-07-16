@@ -10,7 +10,7 @@ export default function Error() {
   }
 
   return (
-    <section className='container error-page'>
+    <section className='container container-min-height error-page'>
       <h1>
         Sorry, the page you were looking for was not found.
       </h1>

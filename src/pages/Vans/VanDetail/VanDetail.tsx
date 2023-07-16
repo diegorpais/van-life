@@ -16,7 +16,7 @@ export default function VanDetail() {
 
 
   return (
-    <section className='container van-detail-page'>
+    <section className='container container-min-height van-detail-page'>
 
       {
         van ? (
