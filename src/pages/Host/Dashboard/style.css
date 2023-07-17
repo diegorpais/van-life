@@ -84,9 +84,34 @@
   color: #4d4d4d;
 }
 
+.listed-vans {
+  margin-top: 30px;
+}
+
+.listed-vans header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.listed-vans header h1 {
+  font-size: 24px;
+  line-height: 22px;
+}
+
+.listed-vans header a {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #161616;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .welcome-info a:hover,
-  .score-box .container a:hover {
+  .score-box .container a:hover,
+  .listed-vans header a:hover {
     transition: filter 0.2s;
     filter: brightness(0.1);
     text-decoration: underline;

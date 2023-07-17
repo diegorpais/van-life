@@ -1,0 +1,50 @@
+.box-listed-vans {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  min-height: 102px;
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box-listed-vans img {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 65px;
+}
+
+.box-listed-vans a {
+  font-size: 16px;
+  color: #161616;
+  text-decoration: none;
+}
+
+.listed-vans-info {
+  min-height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-left: 20px;
+}
+
+.listed-vans-info h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.listed-vans-info p {
+  font-size: 16px;
+  color: #4d4d4d;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .box-listed-vans a:hover {
+    text-decoration: underline;
+  }
+}
