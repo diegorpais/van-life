@@ -82,8 +82,18 @@ input[type='password'] {
   width: 100%;
   margin: 10px 0px;
   border-radius: 6px;
-  border: 1px solid #D1D5DB;
-  color: #4D4D4D;
+  border: 1px solid #d1d5db;
+  color: #4d4d4d;
+}
+
+.form-group .input-error {
+  border-color: red;
+}
+
+.form-group .input-error-message {
+  color: red;
+  font-size: 14px;
+  margin-left: 10px;
 }
 
 .container {
