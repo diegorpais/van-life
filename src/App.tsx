@@ -9,6 +9,7 @@ import Error from './pages/Error/Error';
 import HostLayout from './components/HostLayout/HostLayout';
 import Dashboard from './pages/Host/Dashboard/Dashboard';
 import Income from './pages/Host/Income/Income';
+import Login from './pages/Login/Login';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <Route path='*' element={<Error />} />
             <Route index element={<Home />} />
             <Route path='about' element={<About />} />
+            <Route path='login' element={<Login />} />
 
             <Route path='vans' element={<Vans />} />
             <Route path='vans/:id' element={<VanDetail />} />

@@ -1,0 +1,27 @@
+.login-page {
+}
+
+.login-page h1 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.login-page form {
+  margin-bottom: 80px;
+}
+
+.login-page form button[type='submit'] {
+  margin-top: 20px;
+}
+
+.login-page .create-account {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.login-page .create-account span {
+  font-weight: 600;
+  color: #ff8c38;
+}
