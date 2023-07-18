@@ -50,9 +50,7 @@
     }
   ],
   "dash": {
-    "income": [
-      
-    ],
+    "income": [],
     "review": [
       {
         "stars": "5.0",
@@ -77,6 +75,27 @@
         "name": "Green Wonder",
         "price": 70,
         "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png"
+      }
+    ]
+  },
+  "income": {
+    "amount": "2,260",
+    "chart": {
+      "labels": ["Ju", "Au", "Se", "Oc", "No", "De"],
+      "data": [4, 1.5, 3, 2.6, 1.8, 0.5]
+    },
+    "transactions": [
+      {
+        "amount": "720",
+        "date": "01/12/2022"
+      },
+      {
+        "amount": "560",
+        "date": "10/11/2022"
+      },
+      {
+        "amount": "980",
+        "date": "23/11/2022"
       }
     ]
   }
