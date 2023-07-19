@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from "react-icons/fa6";
 
 import './style.css';
 import ListedVansProps from '../../../core/models/listed-vans-props.model';
@@ -13,7 +14,9 @@ export default function ListedVans(props: ListedVansProps) {
         <p>${van.price}/day</p>
       </div>
 
-      <Link to={`/host/vans/edit/${van.id}`}>Edit</Link>
+      <Link to={`/host/vans/edit/${van.id}`}>
+        <FaArrowRight size={20} color={'#161616'} />
+      </Link>
     </div>
   ));
 
@@ -23,3 +26,4 @@ export default function ListedVans(props: ListedVansProps) {
     </>
   )
 }
+

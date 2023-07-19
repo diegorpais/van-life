@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FaArrowLeft } from "react-icons/fa6";
 
 import './style.css';
 import { api } from '../../../core/services/api';
@@ -23,6 +24,7 @@ export default function VanDetail() {
           <>
             <p>
               <Link to={'/vans'}>
+              <FaArrowLeft size={14} color={'#858585'} />
                 Back to all vans
               </Link>
             </p>

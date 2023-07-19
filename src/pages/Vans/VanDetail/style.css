@@ -1,5 +1,4 @@
 .van-detail-page {
-  
 }
 
 .van-detail-page p a {
@@ -8,6 +7,13 @@
   color: #201f1d;
   text-decoration: underline;
   font-weight: 500;
+
+  display: flex;
+  align-items: center;
+}
+
+.van-detail-page p a svg{
+  margin-right: 10px;
 }
 
 .van-detail-page .van-img {

@@ -12,6 +12,7 @@ import Income from './pages/Host/Income/Income';
 import Login from './pages/Login/Login';
 import Protected from './Routes/Protected';
 import { LoginProvider } from './core/Context/LoginContext';
+import MyVans from './pages/Host/MyVans/MyVans';
 
 export default function App() {
 
@@ -35,6 +36,7 @@ export default function App() {
             }>
               <Route index element={<Dashboard />} />
               <Route path='income' element={<Income />} />
+              <Route path='my-vans' element={<MyVans />} />
             </Route>
           </Route>
         </Routes>
