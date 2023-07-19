@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './style.css';
-import { api } from '../../services/api';
+import { api } from '../../core/services/api';
 
-import Van from '../../models/van.model';
+import Van from '../../core/models/van.model';
 
 export default function Vans() {
   const navigate = useNavigate();

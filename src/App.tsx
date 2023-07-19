@@ -10,10 +10,13 @@ import HostLayout from './components/HostLayout/HostLayout';
 import Dashboard from './pages/Host/Dashboard/Dashboard';
 import Income from './pages/Host/Income/Income';
 import Login from './pages/Login/Login';
+import Protected from './Routes/Protected';
+import { LoginProvider } from './core/Context/LoginContext';
 
 export default function App() {
+
   return (
-    <>
+    <LoginProvider>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainLayout />}>
@@ -25,13 +28,17 @@ export default function App() {
             <Route path='vans' element={<Vans />} />
             <Route path='vans/:id' element={<VanDetail />} />
 
-            <Route path='host' element={<HostLayout />}>
+            <Route path='host' element={
+              <Protected>
+                <HostLayout />
+              </Protected>
+            }>
               <Route index element={<Dashboard />} />
               <Route path='income' element={<Income />} />
             </Route>
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </LoginProvider>
   )
 }

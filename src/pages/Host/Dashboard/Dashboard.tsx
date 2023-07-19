@@ -5,11 +5,11 @@ import { FaStar } from "react-icons/fa6";
 import ListedVans from '../ListedVans/ListedVans';
 
 import './style.css';
-import { api } from '../../../services/api';
-import Van from '../../../models/van.model';
-import DashReview from '../../../models/dash-review.model';
-import DashIncome from '../../../models/dash-income.model';
-import HostDash from '../../../models/host-dash.model';
+import { api } from '../../../core/services/api';
+import Van from '../../../core/models/van.model';
+import DashReview from '../../../core/models/dash-review.model';
+import DashIncome from '../../../core/models/dash-income.model';
+import HostDash from '../../../core/models/host-dash.model';
 
 export default function Dashboard() {
   const [listedVans, setListedVans] = useState<Array<Van>>([]);

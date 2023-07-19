@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 
 import './style.css';
-import { api } from '../../../services/api';
-import IncomeTransactions from '../../../models/income-transactions.model';
-import IncomeModel from '../../../models/income.model';
+import { api } from '../../../core/services/api';
+import IncomeTransactions from '../../../core/models/income-transactions.model';
+import IncomeModel from '../../../core/models/income.model';
 import ChartBar from './ChartBar';
 
 export default function Income() {

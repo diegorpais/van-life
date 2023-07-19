@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
+/* import { FaCircleUser } from "react-icons/fa6"; */
 
 import logoImg from '../../assets/images/logo.svg';
 import './style.css';
@@ -33,6 +34,13 @@ export default function Header() {
         >
           Vans
         </NavLink>
+
+        {/* <NavLink
+          className={({ isActive }) => (isActive ? 'active' : '')}
+          to='/login'
+        >
+          <FaCircleUser size={20} color={'#161616'} />
+        </NavLink> */}
 
       </nav>
     </header>

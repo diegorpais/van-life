@@ -50,7 +50,7 @@
     }
   ],
   "dash": {
-    "income": [],
+    "income": [{ "value": "2,260" }],
     "review": [
       {
         "stars": "5.0",

@@ -2,8 +2,8 @@ import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import './style.css';
-import { api } from '../../../services/api';
-import Van from '../../../models/van.model';
+import { api } from '../../../core/services/api';
+import Van from '../../../core/models/van.model';
 
 export default function VanDetail() {
   const { id } = useParams();

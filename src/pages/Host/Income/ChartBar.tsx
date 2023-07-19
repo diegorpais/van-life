@@ -8,7 +8,7 @@ import {
 } from "chart.js";
 
 import { Bar } from "react-chartjs-2";
-import { IncomeChart } from '../../../models/income-chart.model';
+import { IncomeChart } from '../../../core/models/income-chart.model';
 
 ChartJS.register(BarElement,
   CategoryScale,

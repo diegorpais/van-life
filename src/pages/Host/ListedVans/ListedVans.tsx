@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import './style.css';
-import ListedVansProps from '../../../models/Listed-vans-props.model';
+import ListedVansProps from '../../../core/models/listed-vans-props.model';
 
 export default function ListedVans(props: ListedVansProps) {
   const vansElements = props.listedVans.map(van => (

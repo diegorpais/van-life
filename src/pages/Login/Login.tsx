@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useLogin } from '../../core/Context/LoginContext';
+import { useNavigate } from 'react-router-dom';
 
 import './style.css';
-
-
 
 const loginFormSchema = z.object({
   email: z.string()
@@ -27,8 +27,13 @@ export default function Login() {
     resolver: zodResolver(loginFormSchema)
   });
 
-  function handleLoginSubmit(data: any) {
+  const { signin } = useLogin();
+  const navigate = useNavigate();
+
+  function handleLoginSubmit(data: LoginForm) {
     console.log('Form: ', data);
+    signin();
+    navigate('/host');
   }
 
   return (
