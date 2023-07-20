@@ -1,28 +1,33 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import './style.css';
 
-export default function HostVanDetailLayout() {
+interface HostVanDetailLayoutProps {
+  id: string;
+}
+
+export default function HostVanDetailLayout({ id }: HostVanDetailLayoutProps) {
   return (
     <>
       <nav className='host-van-detail-layout'>
 
         <NavLink
           className={({ isActive }) => (isActive ? 'active' : '')}
-          to='/host/my-vans/:id'
+          to={`/host/my-vans/${id}`}
+          end
         >
           Details
         </NavLink>
 
         <NavLink
           className={({ isActive }) => (isActive ? 'active' : '')}
-          to='/host/my-vans/:id/price'
+          to={`/host/my-vans/${id}/price`}
         >
           Pricing
         </NavLink>
 
         <NavLink
           className={({ isActive }) => (isActive ? 'active' : '')}
-          to='/host/my-vans/:id/photos'
+          to={`/host/my-vans/${id}/photos`}
         >
           Photos
         </NavLink>

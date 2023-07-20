@@ -7,3 +7,7 @@
 .my-van-info p span {
   font-weight: 500;
 }
+
+.my-van-info .type {
+  text-transform: capitalize;
+}

@@ -17,6 +17,7 @@ import Protected from './Routes/Protected';
 import MyVans from './pages/Host/MyVans/MyVans';
 import MyVanDetail from './pages/Host/MyVans/MyVanDetail/MyVanDetail';
 import MyVanInfo from './pages/Host/MyVans/MyVanInfo/MyVanInfo';
+import MyVanPrice from './pages/Host/MyVans/MyVanPrice/MyVanPrice';
 
 export default function App() {
 
@@ -49,6 +50,7 @@ export default function App() {
                 </MyVanDetailProvider>
               }>
                 <Route index element={<MyVanInfo />} />
+                <Route path='price' element={<MyVanPrice />} />
               </Route>
 
 

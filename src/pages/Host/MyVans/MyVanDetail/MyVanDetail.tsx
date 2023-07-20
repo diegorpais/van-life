@@ -49,7 +49,7 @@ export default function MyVanDetail() {
           )
         }
 
-        <HostVanDetailLayout />
+        <HostVanDetailLayout id={id as string} />
 
       </div>
 
