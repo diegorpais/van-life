@@ -18,6 +18,7 @@ import MyVans from './pages/Host/MyVans/MyVans';
 import MyVanDetail from './pages/Host/MyVans/MyVanDetail/MyVanDetail';
 import MyVanInfo from './pages/Host/MyVans/MyVanInfo/MyVanInfo';
 import MyVanPrice from './pages/Host/MyVans/MyVanPrice/MyVanPrice';
+import MyVanPhotos from './pages/Host/MyVans/MyVanPhotos/MyVanPhotos';
 
 export default function App() {
 
@@ -51,9 +52,8 @@ export default function App() {
               }>
                 <Route index element={<MyVanInfo />} />
                 <Route path='price' element={<MyVanPrice />} />
+                <Route path='photos' element={<MyVanPhotos />} />
               </Route>
-
-
 
             </Route>
 

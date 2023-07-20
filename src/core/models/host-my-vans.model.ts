@@ -10,5 +10,6 @@ export default interface MyVansModel {
 }
 
 interface gallery {
+  id: string;
   imageUrl: string;
 }

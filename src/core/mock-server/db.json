@@ -110,12 +110,15 @@
       "visibility": "public",
       "gallery": [
         {
+          "id": "1",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png"
         },
         {
+          "id": "2",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png"
         },
         {
+          "id": "3",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png"
         }
       ]
@@ -130,12 +133,15 @@
       "visibility": "public",
       "gallery": [
         {
+          "id": "1",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png"
         },
         {
+          "id": "2",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png"
         },
         {
+          "id": "3",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png"
         }
       ]
@@ -150,12 +156,15 @@
       "visibility": "public",
       "gallery": [
         {
+          "id": "1",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png"
         },
         {
+          "id": "2",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png"
         },
         {
+          "id": "3",
           "imageUrl": "https://assets.scrimba.com/advanced-react/react-router/modest-explorer.png"
         }
       ]
