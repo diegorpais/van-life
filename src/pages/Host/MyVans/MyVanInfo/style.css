@@ -1,0 +1,9 @@
+.my-van-info p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.my-van-info p span {
+  font-weight: 500;
+}

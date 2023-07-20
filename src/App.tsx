@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { LoginProvider } from './core/Context/LoginContext';
+import { MyVanDetailProvider } from './core/Context/MyVanDetailContext';
+
 import MainLayout from './components/MainLayout/MainLayout';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -11,8 +14,9 @@ import Dashboard from './pages/Host/Dashboard/Dashboard';
 import Income from './pages/Host/Income/Income';
 import Login from './pages/Login/Login';
 import Protected from './Routes/Protected';
-import { LoginProvider } from './core/Context/LoginContext';
 import MyVans from './pages/Host/MyVans/MyVans';
+import MyVanDetail from './pages/Host/MyVans/MyVanDetail/MyVanDetail';
+import MyVanInfo from './pages/Host/MyVans/MyVanInfo/MyVanInfo';
 
 export default function App() {
 
@@ -20,6 +24,7 @@ export default function App() {
     <LoginProvider>
       <BrowserRouter>
         <Routes>
+
           <Route path='/' element={<MainLayout />}>
             <Route path='*' element={<Error />} />
             <Route index element={<Home />} />
@@ -37,8 +42,21 @@ export default function App() {
               <Route index element={<Dashboard />} />
               <Route path='income' element={<Income />} />
               <Route path='my-vans' element={<MyVans />} />
+
+              <Route path='my-vans/:id' element={
+                <MyVanDetailProvider>
+                  <MyVanDetail />
+                </MyVanDetailProvider>
+              }>
+                <Route index element={<MyVanInfo />} />
+              </Route>
+
+
+
             </Route>
+
           </Route>
+
         </Routes>
       </BrowserRouter>
     </LoginProvider>

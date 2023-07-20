@@ -14,7 +14,7 @@ export default function ListedVans(props: ListedVansProps) {
         <p>${van.price}/day</p>
       </div>
 
-      <Link to={`/host/vans/edit/${van.id}`}>
+      <Link to={`/host/my-vans/${van.id}`}>
         <FaArrowRight size={20} color={'#161616'} />
       </Link>
     </div>

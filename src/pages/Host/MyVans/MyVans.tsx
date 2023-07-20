@@ -14,7 +14,7 @@ export default function MyVans() {
 
 
   return (
-    <section className='my-vans-page container container-min-height'>
+    <section className='my-vans-page container container-min-height-host'>
       <h1 className='title'>Your listed vans</h1>
 
       <ListedVans listedVans={vans} />
