@@ -19,6 +19,7 @@ import MyVanDetail from './pages/Host/MyVans/MyVanDetail/MyVanDetail';
 import MyVanInfo from './pages/Host/MyVans/MyVanInfo/MyVanInfo';
 import MyVanPrice from './pages/Host/MyVans/MyVanPrice/MyVanPrice';
 import MyVanPhotos from './pages/Host/MyVans/MyVanPhotos/MyVanPhotos';
+import Reviews from './pages/Host/Reviews/Reviews';
 
 export default function App() {
 
@@ -43,6 +44,7 @@ export default function App() {
             }>
               <Route index element={<Dashboard />} />
               <Route path='income' element={<Income />} />
+              <Route path='reviews' element={<Reviews />} />
               <Route path='my-vans' element={<MyVans />} />
 
               <Route path='my-vans/:id' element={
