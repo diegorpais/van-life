@@ -1,6 +1,13 @@
 import './style.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  function navigateToRoute(route: string) {
+    navigate(`/${route}`);
+  }
+
   return (
     <section className='hero-image'>
 
@@ -11,6 +18,7 @@ export default function Home() {
         </div>
 
         <button
+          onClick={() => navigateToRoute('vans')}
           type='button'
           className='btn btn-primary'>
           Find your van

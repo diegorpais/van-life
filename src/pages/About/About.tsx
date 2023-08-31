@@ -1,7 +1,14 @@
 import aboutHeaderImg from '../../assets/images/about-header-img.png';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function About() {
+  const navigate = useNavigate();
+
+  function navigateToRoute(route: string) {
+    navigate(`/${route}`);
+  }
+
   return (
     <section className='about-page'>
 
@@ -29,6 +36,7 @@ export default function About() {
         <div className="box-explore-our-vans">
           <h2>Your destination is waiting. Your van is ready.</h2>
           <button
+            onClick={() => navigateToRoute('vans')}
             type='button'
             className='btn btn-secondary'>
             Explore our vans

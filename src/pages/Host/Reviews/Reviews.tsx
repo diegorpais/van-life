@@ -84,7 +84,7 @@ export default function Reviews() {
     const stars = [];
 
     for (let index = 0; index < amountOfStars; index++) {
-      stars.push(<FaStar size={15} color={'#FF8C38'} />);
+      stars.push(<FaStar size={15} color={'#FF8C38'} id={`star-${0}`} key={index} />);
     }
 
     return stars;
