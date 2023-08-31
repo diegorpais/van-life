@@ -1,12 +1,12 @@
-import { useParams, Link, NavLink } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa6";
 
 import './style.css';
 import { useEffect, useState } from 'react';
-import { api } from '../../../../core/services/api';
 import MyVansModel from '../../../../core/models/host-my-vans.model';
 import HostVanDetailLayout from '../../../../components/HostVanDetailLayout/HostVanDetailLayout';
 import { useMyVanDetail } from '../../../../core/Context/MyVanDetailContext';
+import { getMyVanDeail } from '../../../../core/services/vans.service';
 
 export default function MyVanDetail() {
   const { id } = useParams();
@@ -16,11 +16,14 @@ export default function MyVanDetail() {
   const [myVan, setMyVan] = useState<MyVansModel>({} as MyVansModel);
 
   useEffect(() => {
-    api.get(`my-vans/${id}`)
+    if (!id) return;
+
+    getMyVanDeail(id)
       .then(res => {
-        setMyVan(res.data);
-        setVanToContext(res.data);
+        setMyVan(res);
+        setVanToContext(res);
       });
+
   }, []);
 
   return (

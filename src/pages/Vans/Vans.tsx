@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './style.css';
-import { api } from '../../core/services/api';
-
 import Van from '../../core/models/van.model';
+import { getVanFilteredVanList, getVans } from '../../core/services/vans.service';
 
 export default function Vans() {
   const navigate = useNavigate();
@@ -19,8 +18,8 @@ export default function Vans() {
   const [filters, setFilters] = useState<Array<string>>([]);
 
   useEffect(() => {
-    api.get('vans')
-      .then(res => setVans(res.data))
+    getVans()
+      .then(res => setVans(res))
   }, []);
 
   useEffect(() => {
@@ -57,8 +56,8 @@ export default function Vans() {
 
     const urlWithoutLastCharacter = url.slice(0, -1);
 
-    api.get(`vans?${urlWithoutLastCharacter}`)
-      .then(res => setVans(res.data));
+    getVanFilteredVanList(urlWithoutLastCharacter)
+      .then(res => setVans(res));
   }
 
   function clearFilters() {

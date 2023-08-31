@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import './style.css';
 import MyVansModel from '../../../core/models/host-my-vans.model';
-import { api } from '../../../core/services/api';
 import ListedVans from '../ListedVans/ListedVans';
+import { getMyVansData } from '../../../core/services/vans.service';
 
 export default function MyVans() {
   const [vans, setVans] = useState<Array<MyVansModel>>([]);
 
   useEffect(() => {
-    api.get('my-vans')
-      .then(res => setVans(res.data));
+    getMyVansData()
+      .then(res => setVans(res));
   }, []);
 
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './style.css';
 import { FaStar } from "react-icons/fa6";
-import { api } from '../../../core/services/api';
 import ReviewsModel, { CustomerRating, OverallRating } from '../../../core/models/reviews.model';
+import { getReviewsData } from '../../../core/services/vans.service';
 
 export default function Reviews() {
   const [customerReviews, setCustomerReviews] = useState<ReviewsModel>({} as ReviewsModel);
@@ -11,22 +11,21 @@ export default function Reviews() {
   const [customerRating, setCustomerRating] = useState<Array<CustomerRating>>([]);
 
   useEffect(() => {
-
-    api.get<ReviewsModel>('reviews')
+    getReviewsData()
       .then(res => {
 
-        const customerReviewsOverallRating = res.data.overallRating.map(overallRating => {
-          overallRating.percentage = getPercentage(overallRating.amount, res.data.total)
+        const customerReviewsOverallRating = res.overallRating.map(overallRating => {
+          overallRating.percentage = getPercentage(overallRating.amount, res.total)
           return overallRating;
         });
 
-        res.data.overallRating = customerReviewsOverallRating;
+        res.overallRating = customerReviewsOverallRating;
 
-        setCustomerReviews(res.data);
-        getMostVotedRating(res.data.overallRating);
+        setCustomerReviews(res);
+        getMostVotedRating(res.overallRating);
 
-        setAmountOfReviews(res.data.customerRating.length);
-        setCustomerRating(res.data.customerRating);
+        setAmountOfReviews(res.customerRating.length);
+        setCustomerRating(res.customerRating);
 
       });
   }, []);

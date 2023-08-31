@@ -3,16 +3,18 @@ import { useState, useEffect } from 'react';
 import { FaArrowLeft } from "react-icons/fa6";
 
 import './style.css';
-import { api } from '../../../core/services/api';
 import Van from '../../../core/models/van.model';
+import { getVanDetail } from '../../../core/services/vans.service';
 
 export default function VanDetail() {
   const { id } = useParams();
   const [van, setVan] = useState<Van | null>(null);
 
   useEffect(() => {
-    api.get(`vans/${id}`)
-      .then(res => setVan(res.data))
+    if (!id) return;
+
+    getVanDetail(id)
+      .then(res => setVan(res))
   }, []);
 
 
@@ -24,7 +26,7 @@ export default function VanDetail() {
           <>
             <p>
               <Link to={'/vans'}>
-              <FaArrowLeft size={14} color={'#858585'} />
+                <FaArrowLeft size={14} color={'#858585'} />
                 Back to all vans
               </Link>
             </p>

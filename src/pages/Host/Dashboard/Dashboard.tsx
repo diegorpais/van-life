@@ -5,11 +5,11 @@ import { FaStar } from "react-icons/fa6";
 import ListedVans from '../ListedVans/ListedVans';
 
 import './style.css';
-import { api } from '../../../core/services/api';
 import Van from '../../../core/models/van.model';
 import DashReview from '../../../core/models/dash-review.model';
 import DashIncome from '../../../core/models/dash-income.model';
 import HostDash from '../../../core/models/host-dash.model';
+import { getDashboardData } from '../../../core/services/vans.service';
 
 export default function Dashboard() {
   const [listedVans, setListedVans] = useState<Array<Van>>([]);
@@ -17,8 +17,10 @@ export default function Dashboard() {
   const [income, setIncome] = useState<Array<DashIncome>>([]);
 
   useEffect(() => {
-    api.get('dash')
-      .then(res => getInitialValues(res.data))
+
+    getDashboardData()
+      .then(res => getInitialValues(res));
+      
   }, []);
 
   function getInitialValues(initialValues: HostDash) {

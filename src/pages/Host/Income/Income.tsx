@@ -3,10 +3,11 @@
 import { useState, useEffect } from 'react';
 
 import './style.css';
-import { api } from '../../../core/services/api';
+
 import IncomeTransactions from '../../../core/models/income-transactions.model';
 import IncomeModel from '../../../core/models/income.model';
 import ChartBar from './ChartBar';
+import { getIncomeData } from '../../../core/services/vans.service';
 
 export default function Income() {
   const [chartLabels, setChartLabels] = useState<Array<string>>([]);
@@ -15,8 +16,8 @@ export default function Income() {
   const [transactions, setTransactions] = useState<Array<IncomeTransactions>>([]);
 
   useEffect(() => {
-    api.get('income')
-      .then(res => getInitialData(res.data));
+    getIncomeData()
+      .then(res => getInitialData(res));
   }, []);
 
   function getInitialData(data: IncomeModel) {
